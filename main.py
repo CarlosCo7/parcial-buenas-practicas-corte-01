@@ -72,3 +72,5 @@ for product in cart:
     )
 
     index += 1
+
+print("Nota: este cambio hace parte de una nueva funcionalidad.")
