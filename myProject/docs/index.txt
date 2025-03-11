@@ -1,0 +1,19 @@
+# ÍNDICE DE DOCUMENTACIÓN DEL PROYECTO
+
+1. Descripción general del proyecto.
+	 Proporciona una visión general del propósito del proyecto, explicando su objetivo principal: calcular las formas de pago para las órdenes de compra de una empresa contratante que compra productos a una fábrica de refacciones.
+
+2. Estructura de directorios
+	 Presenta de manera muy general la forma en la que se ve el proyecto desde arriba.
+
+3. Componentes del proyecto
+   Describe los elementos que componen el sistema, tales como la entrada de usuario (productos y cantidades), los cálculos que realiza el sistema (monto total, inversión, préstamo y crédito) y cómo estos se utilizan para determinar las formas de pago.
+
+4. Reglas de negocio
+	 Define las reglas que guían los cálculos de pago del proyecto.
+
+5. Productos disponibles
+	 Proporciona una lista de los productos que están disponibles para la compra.
+
+6. Ejemplo con cálculos incluidos
+   Presenta un caso práctico en el que se muestran todos los cálculos realizados por el sistema, tomando un producto específico y un número de unidades, para ejemplificar cómo se calcula el monto total de la compra, la inversión, el préstamo, el crédito al fabricante y los intereses correspondientes.
