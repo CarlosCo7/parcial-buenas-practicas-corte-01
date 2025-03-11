@@ -11,11 +11,11 @@ products = [
     {"id": 10, "name": "Radiadores", "price": 200_000},
 ]
 
-active = True
+loop = True
 cart = []
 
-while active:
-    print("# Productos disponibles:\n")
+while loop:
+    print("# PRODUCTOS DISPONIBLES:\n")
 
     for product in products:
         print(f"* {product['id']}) {product['name']} (COP ${product['price']})")
@@ -36,8 +36,17 @@ while active:
     restart = input("> ¿Deseas agregar otro producto? (s/n): ").lower()
 
     if restart == "n":
-        active = False
+        loop = False
 
-    print()  # solo para temas de estilo.
+    print()  # NOTE: Esta impresión es solo por temas de estilo.
 
-print(cart)
+print("# ORDENES DE COMPRA")
+
+index = 1
+
+for product in cart:
+    total = product["price"] * product["quantity"]
+
+    company_investment = 0
+    bank_credit = 0
+    manufacturer_credit = 0
