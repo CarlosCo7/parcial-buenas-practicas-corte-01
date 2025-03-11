@@ -1,0 +1,63 @@
+# CONFIGURACIÓN DEL PROYECTO
+
+## Descripción general del proyecto
+- Este proyecto es una aplicación que calcula las formas de pago para las órdenes de compra de una empresa contratante que compra productos a una fábrica de refacciones. Según el monto total de la compra, el sistema determina cómo se debe financiar la orden entre inversión propia, préstamo bancario y crédito al fabricante. También calcula los intereses que se generan sobre el crédito solicitado al fabricante.
+
+## Estructura de directorios
+```
+├── myProject
+│   └── docs
+│       ├── config.txt
+│       └── index.txt
+├── README.txt
+└── main.py
+```
+
+## Componentes del proyecto
+- Entrada del usuario:
+  1. Pieza: El tipo de pieza el cliente desea comprar.
+  1. Cantidad: La cantidad de unidades de la pieza seleccionada que el cliente desea comprar.
+  
+- Cálculos realizados:
+  1. Monto total de la compra: Se calcula multiplicando el número de piezas por el precio unitario de cada una.
+  2. Inversión de la empresa:
+     - Si el monto total de la compra excede COP $500,000: 55% del monto total.
+     - Si el monto total de la compra no excede COP $500,000: 70% del monto total.
+  3. Préstamo del banco:
+     - Si el monto total de la compra excede COP $500,000: 30% del monto total.
+     - Si el monto total de la compra no excede COP $500,000: 0%.
+  4. Crédito al fabricante:
+     - Si el monto total excede COP $500,000, el crédito es el 15% del monto total.
+     - Si el monto total no excede COP $500,000, el crédito es el 30% del monto total.
+  5. Intereses del crédito al fabricante: El fabricante cobra un 20% de interés sobre la cantidad que se le paga a crédito.
+
+## Reglas de negocio
+1. Si el monto total de la compra excede COP $500,000:
+   - La empresa invierte el 55% del monto total de la compra.
+   - El banco otorga un préstamo por el 30% del monto total.
+   - El crédito al fabricante será el 15% del monto total de la compra.
+   
+2. Si el monto total de la compra no excede COP $500,000:
+   - La empresa invierte el 70% del monto total de la compra.
+   - El crédito al fabricante será el 30% del monto total de la compra.
+
+3. Intereses sobre el crédito al fabricante:
+   - El fabricante cobra un 20% adicional sobre el monto que se le paga a crédito. Este interés se calcula automáticamente.
+
+## Productos disponibles
+- Bujías, Filtros de aire, Pastillas de freno, Amortiguadores, Correas de distribución, Baterías, Cables de encendido, Frenos de disco, Bombas de agua, Radiadores
+
+## Ejemplo:
+- Identificador del producto: 1
+- Producto seleccionado: Bujías
+- Precio unitario: COP $60,000
+- Número de piezas a comprar: 10
+
+### Cálculo:
+- Monto total de la compra: COP $60,000 x 10 = COP $600,000
+- Inversión de la empresa: COP $600,000 x 0.55 = COP $330,000
+- Préstamo del banco: COP $600,000 x 0.30 = COP $180,000
+- Crédito al fabricante: COP $600,000 x 0.15 = COP $90,000
+- Intereses sobre el crédito al fabricante: COP $90,000 x 0.20 = COP $18,000
+
+Este cálculo es realizado automáticamente por el sistema después de que el usuario ingresa los datos requeridos.
