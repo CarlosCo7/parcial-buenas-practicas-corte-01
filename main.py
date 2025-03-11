@@ -50,3 +50,25 @@ for product in cart:
     company_investment = 0
     bank_credit = 0
     manufacturer_credit = 0
+
+    if total > 500_000:
+        company_investment = total * 0.55
+        bank_credit = total * 0.30
+        manufacturer_credit = total * 0.30
+    else:
+        company_investment = total * 0.7
+        manufacturer_credit = total - company_investment
+
+    manufacturer_credit_interest = manufacturer_credit * 0.20
+
+    print(
+        f"\n* Orden de compra #{index} ({product['name']})"
+        f"\n- Número de piezas: {product['quantity']}"
+        f"\n- Precio unitario: COP ${product['price']}"
+        f"\n- Total: COP ${total}"
+        f"\n- Inversión de la empresa: COP ${int(company_investment)}"
+        f"\n- Préstamo al banco: COP ${int(bank_credit)}"
+        f"\n- Crédito al fabricante (+20% interés): COP ${int(manufacturer_credit)} + COP ${int(manufacturer_credit_interest)}"
+    )
+
+    index += 1
